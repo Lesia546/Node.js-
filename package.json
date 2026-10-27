@@ -1,0 +1,41 @@
+{
+  "name": "dobrohub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Платформа для пошуку волонтерських можливостей і локальної взаємодопомоги",
+  "main": "dist/app.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "pretest": "npm run build",
+    "test": "node --test",
+    "smoke": "node dist/app.js",
+    "audit:deps": "depcruise src --config .dependency-cruiser.cjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run smoke",
+    "sha": "git rev-parse --short HEAD",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "volunteering",
+    "community",
+    "dobrohub"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "dependency-cruiser": "^18.7.0",
+    "eslint": "^10.13.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0"
+  }
+}
