@@ -1,0 +1,49 @@
+37e0dcd
+npm run check
+
+> dobrohub@0.1.0 check
+> npm run format:check && npm run lint && npm run typecheck && npm test && npm run smoke
+
+
+> dobrohub@0.1.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> dobrohub@0.1.0 lint
+> eslint .
+
+
+> dobrohub@0.1.0 typecheck
+> tsc --noEmit
+
+
+> dobrohub@0.1.0 pretest
+> npm run build
+
+
+> dobrohub@0.1.0 build
+> tsc
+
+
+> dobrohub@0.1.0 test
+> node --test
+
+✔ APP_NAME дорівнює DobroHub (0.9939ms)
+✔ getGreeting починається з назви застосунку (0.2777ms)
+✔ smoke: dist/app.js запускається, друкує привітання і завершується (232.2966ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 467.6247
+
+> dobrohub@0.1.0 smoke
+> node dist/app.js
+
+DobroHub: проєкт готовий до розробки.
+exit code: 0
