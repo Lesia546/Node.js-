@@ -1,0 +1,12 @@
+npm run audit:deps
+
+> dobrohub@0.1.0 audit:deps
+> depcruise src --config .dependency-cruiser.cjs
+
+
+  error publications-allowed-deps: src/modules/publications/index.ts → src/modules/moderation/index.ts
+
+x 1 dependency violations (1 errors, 0 warnings). 11 modules, 1 dependencies cruised.
+
+make: *** [Makefile:12: audit] Error 1
+exit code: 2

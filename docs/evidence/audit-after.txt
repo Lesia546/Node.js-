@@ -1,0 +1,9 @@
+npm run audit:deps
+
+> dobrohub@0.1.0 audit:deps
+> depcruise src --config .dependency-cruiser.cjs
+
+
+✔ no dependency violations found (11 modules, 0 dependencies cruised)
+
+exit code: 0
